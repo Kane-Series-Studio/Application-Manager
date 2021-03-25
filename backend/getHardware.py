@@ -46,7 +46,6 @@ def getRamOut():
     print(f"Used: {get_size(swap.used)}")
     print(f"Percentage: {swap.percent}%")
 
-
 def InfoSystem():
 
     uname = platform.uname()
