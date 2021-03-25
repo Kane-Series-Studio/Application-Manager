@@ -126,4 +126,3 @@ def getGpu():
                                        "temperature", "uuid")))
 
 
-getGpu()
