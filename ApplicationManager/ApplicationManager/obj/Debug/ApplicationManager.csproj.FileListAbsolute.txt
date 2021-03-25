@@ -1,0 +1,9 @@
+D:\Desktop\KaneSeries\ApplicationManager\Application-Manager\ApplicationManager\ApplicationManager\bin\Debug\ApplicationManager.exe.config
+D:\Desktop\KaneSeries\ApplicationManager\Application-Manager\ApplicationManager\ApplicationManager\bin\Debug\ApplicationManager.exe
+D:\Desktop\KaneSeries\ApplicationManager\Application-Manager\ApplicationManager\ApplicationManager\bin\Debug\ApplicationManager.pdb
+D:\Desktop\KaneSeries\ApplicationManager\Application-Manager\ApplicationManager\ApplicationManager\obj\Debug\ApplicationManager.csprojAssemblyReference.cache
+D:\Desktop\KaneSeries\ApplicationManager\Application-Manager\ApplicationManager\ApplicationManager\obj\Debug\ApplicationManager.Properties.Resources.resources
+D:\Desktop\KaneSeries\ApplicationManager\Application-Manager\ApplicationManager\ApplicationManager\obj\Debug\ApplicationManager.csproj.GenerateResource.cache
+D:\Desktop\KaneSeries\ApplicationManager\Application-Manager\ApplicationManager\ApplicationManager\obj\Debug\ApplicationManager.csproj.CoreCompileInputs.cache
+D:\Desktop\KaneSeries\ApplicationManager\Application-Manager\ApplicationManager\ApplicationManager\obj\Debug\ApplicationManager.exe
+D:\Desktop\KaneSeries\ApplicationManager\Application-Manager\ApplicationManager\ApplicationManager\obj\Debug\ApplicationManager.pdb
