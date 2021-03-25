@@ -19,6 +19,14 @@ def get_size(bytes, suffix="B"):
         bytes /= factor
 
 
+cpufreq = psutil.cpu_freq()
+PhysicalCords = psutil.cpu_count(logical=False)
+TotalCords = psutil.cpu_count(logical=True)
+MaxCPUFreq = f"{cpufreq.max:..2f}"
+MinCPUFreq = f"{cpufreq.min:..2f}"
+Cores = cores()
+
+
 def CPUPrintOut():
     print("="*40, "CPU Info", "="*40)
     print("Physical cores:", psutil.cpu_count(logical=False))
@@ -27,9 +35,24 @@ def CPUPrintOut():
     print(f"Max Frequency: {cpufreq.max:.2f}Mhz")
     print(f"Min Frequency: {cpufreq.min:.2f}Mhz")
     print("CPU Usage Per Core:")
+
+
+def cores():
     for i, percentage in enumerate(psutil.cpu_percent(percpu=True, interval=1)):
         print(f"Core {i}: {percentage}%")
-    print(f"Total CPU Usage: {psutil.cpu_percent()}%")
+        print(f"Total CPU Usage: {psutil.cpu_percent()}%")
+
+
+svmem = psutil.virtual_memory()
+TotalRAM = get_size(svmem.total)
+AvailableRam = get_size(svmem.available)
+UsedRAM = get_size(svmem.used)
+PercentageRAM = get_size(svmem.percent)
+swap = psutil.swap_memory()
+totalSWAP = get_size(swap.total)
+freeSWAP = get_size(swap.free)
+usedSWAP = get_size(swap.used)
+percentageSWAP = get_size(swap.percent)
 
 
 def getRamOut():
@@ -47,6 +70,15 @@ def getRamOut():
     print(f"Percentage: {swap.percent}%")
 
 
+uname = platform.uname()
+System = uname.system
+NodeName = uname.node
+Release = uname.release
+Version = uname.version
+Machine = uname.machine
+Processor = uname.processor
+
+
 def InfoSystem():
 
     uname = platform.uname()
@@ -58,12 +90,25 @@ def InfoSystem():
     print(f"Processor: {uname.processor}")
 
 
+#! BLOW THIS CODE IS NOT USABLE METHODS, THESE ARE SINCE THEY MUST BE FUNCTIONS, WILL BE UPDATED LATER!!
+#! BLOW THIS CODE IS NOT USABLE METHODS, THESE ARE SINCE THEY MUST BE FUNCTIONS, WILL BE UPDATED LATER!!
+#! BLOW THIS CODE IS NOT USABLE METHODS, THESE ARE SINCE THEY MUST BE FUNCTIONS, WILL BE UPDATED LATER!!
+#! BLOW THIS CODE IS NOT USABLE METHODS, THESE ARE SINCE THEY MUST BE FUNCTIONS, WILL BE UPDATED LATER!!
+#! BLOW THIS CODE IS NOT USABLE METHODS, THESE ARE SINCE THEY MUST BE FUNCTIONS, WILL BE UPDATED LATER!!
+#! BLOW THIS CODE IS NOT USABLE METHODS, THESE ARE SINCE THEY MUST BE FUNCTIONS, WILL BE UPDATED LATER!!
+#! BLOW THIS CODE IS NOT USABLE METHODS, THESE ARE SINCE THEY MUST BE FUNCTIONS, WILL BE UPDATED LATER!!
+#! BLOW THIS CODE IS NOT USABLE METHODS, THESE ARE SINCE THEY MUST BE FUNCTIONS, WILL BE UPDATED LATER!!
+
+'''
+partitions = psutil.disk_partitions()
+
+
 def getDisk():
     print("="*40, "Disk Information", "="*40)
     print("Partitions and Usage:")
     partitions = psutil.disk_partitions()
     for partition in partitions:
-        print(f"=== Device: {partition.device} ===")
+        partition_device = print(f"=== Device: {partition.device} ===")
         print(f"  Mountpoint: {partition.mountpoint}")
         print(f"  File system type: {partition.fstype}")
         try:
@@ -79,23 +124,26 @@ def getDisk():
     print(f"Total write: {get_size(disk_io.write_bytes)}")
 
 
-def getNetworkinfo():
-    print("="*40, "Network Information", "="*40)
-    if_addrs = psutil.net_if_addrs()
-    for interface_name, interface_addresses in if_addrs.items():
-        for address in interface_addresses:
-            print(f"=== Interface: {interface_name} ===")
-            if str(address.family) == 'AddressFamily.AF_INET':
-                print(f"  IP Address: {address.address}")
-                print(f"  Netmask: {address.netmask}")
-                print(f"  Broadcast IP: {address.broadcast}")
-            elif str(address.family) == 'AddressFamily.AF_PACKET':
-                print(f"  MAC Address: {address.address}")
-                print(f"  Netmask: {address.netmask}")
-                print(f"  Broadcast MAC: {address.broadcast}")
-    net_io = psutil.net_io_counters()
-    print(f"Total Bytes Sent: {get_size(net_io.bytes_sent)}")
-    print(f"Total Bytes Received: {get_size(net_io.bytes_recv)}")
+if_addrs = psutil.net_if_addrs()
+for interface_name, interface_addresses in if_addrs.items():
+    for address in interface_addresses:
+
+        if str(address.family) == 'AddressFamily.AF_INET':
+
+            # VARIABLES
+            Address = Address.address
+            AddressNetmask = address.netmask
+            AddressBrodcastIP = address.broadcast
+        elif str(address.family) == 'AddressFamily.AF_PACKET':
+
+            # VARIABLES
+            AddressMAC = address.address
+            AddressNetMask = address.netmask
+            AddressBrodcastMAC = address.broadcast
+
+net_io = psutil.net_io_counters()
+TotalBytesSent = get_size(net_io.bytes_sent)
+TotalBytesRecevied = get_size(net_io.bytes_recv)
 
 
 def getGpu():
@@ -123,7 +171,4 @@ def getGpu():
         ))
 
     print(tabulate(list_gpus, headers=("id", "name", "load", "free memory", "used memory", "total memory",
-                                       "temperature", "uuid")))
-
-
-getGpu()
+                                       "temperature", "uuid")))'''
