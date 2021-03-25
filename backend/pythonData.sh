@@ -1,0 +1,3 @@
+python getHardware.py
+
+$SHELL
