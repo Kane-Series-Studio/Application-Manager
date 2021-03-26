@@ -24,7 +24,7 @@ class taskmanager:
         return self.yourHZ
 
     def getCpuVersion(self):
-        self.yourCpVersion = cpuinfo.get_cpu_info()['cpuinfo_version_string']
+        self.yourCpuVersion = cpuinfo.get_cpu_info()['cpuinfo_version_string']
         return self.yourCpuVersion
 
     def getProcesses(self):
@@ -34,4 +34,16 @@ class taskmanager:
         return self.runningProcesses
         
 
+
 tm = taskmanager()
+#### all variables
+processor = tm.getProcessor()
+bits = tm.getBits()
+brand = tm.getBrand()
+hz = tm.getHZ()
+cpuVersion = tm.getCpuVersion()
+processes = tm.getProcesses()
+
+
+
+
