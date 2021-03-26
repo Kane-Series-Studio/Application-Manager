@@ -36,10 +36,10 @@ id     Name     load     free mem    used mem  total mem   temp.   uuid
 
 # Developers
 
-| Frontend Developer 	| C# Developer 	| Python Developer 	|
-|--------------------	|--------------	|------------------	|
-| Overflow           	| Python393    	| VoidyDEV         	|
-|                    	|              	|                  	|
+| Frontend Developer 	| C# Developer 	| Python Developer 	| DataBase Management | Exteneral Developer  |   Javascript Developer  |
+|--------------------	|--------------	|------------------	|---------------------|----------------------|-------------------------|
+| Overflow           	| Python393    	| VoidyDEV         	|      VoidyDEV       |     LouisTheXIV      |    Overflow             |
+|                    	|              	|                  	|                     |                      |                         |
 
 
 ---
@@ -49,6 +49,7 @@ id     Name     load     free mem    used mem  total mem   temp.   uuid
  * shell scripts
  * python deps. 
  * nodejs workflow
+ * login hub system
 
 
 ### &copy; Kane Series Studio 2021
