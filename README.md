@@ -38,7 +38,7 @@ id     Name     load     free mem    used mem  total mem   temp.   uuid
 
 | Frontend Developer 	| C# Developer 	| Python Developer 	| DataBase Management | Exteneral Developer  |
 |--------------------	|--------------	|------------------	|---------------------|----------------------|
-| Overflow           	| Python393    	| VoidyDEV         	| VoidyDEV & Python393|   LouisTheXIV        |
+| Overflow           	| Python393    	| VoidyDEV         	|      VoidyDEV       |     LouisTheXIV      |
 |                    	|              	|                  	|                     |                      |
 
 
