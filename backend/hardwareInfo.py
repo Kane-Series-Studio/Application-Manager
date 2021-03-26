@@ -80,20 +80,6 @@ svmem = psutil.virtual_memory()
 
 #### all variables
 
-processor
-bits
-brand
-hz
-cpuVersion
-processes
-TotalRAM
-AvailableRam
-UsedRAM
-PercentageRAM
-TotalMemory
-FreeMemory
-UsedMemory
-
 processor = tm.getProcessor()
 bits = tm.getBits()
 brand = tm.getBrand()
